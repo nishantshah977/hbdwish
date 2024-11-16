@@ -1,10 +1,14 @@
-$(window).load(function(){
-	$('.loading').fadeOut('fast');
-	$('.container').fadeIn('fast');
-	let params = new URLSearchParams(document.location.search);
-document.getElementById('birthdayPerson').innerText = params.get("name");
+$(window).on('load', function () {
+    $('.loading').fadeOut('fast');
+    $('.container').fadeIn('fast');
 });
+
 $('document').ready(function(){
+	        const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    if (name) {
+        document.getElementById('birthdayPerson').innerText = name;
+    }
 		var vw;
 		$(window).resize(function(){
 			 vw = $(window).width()/2;
