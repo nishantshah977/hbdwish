@@ -1,9 +1,8 @@
-let params = new URLSearchParams(document.location.search);
-document.getElementById('#birthdayPerson').innerText = params.get("name")
-
 $(window).load(function(){
 	$('.loading').fadeOut('fast');
 	$('.container').fadeIn('fast');
+	let params = new URLSearchParams(document.location.search);
+document.getElementById('birthdayPerson').innerText = params.get("name");
 });
 $('document').ready(function(){
 		var vw;
